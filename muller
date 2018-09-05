@@ -47,7 +47,7 @@ def muller(fx, x0, x1, x2, parada):
 
         #criterio de parada
         if err <= parada:
-            return p3
+            return p3, i
             break
             
         #trocando os valores para os mais atuais
