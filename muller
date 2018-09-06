@@ -3,7 +3,7 @@ def evalFunction(f,x):
     x=eval(f)
     return x
 
-def muller(fx, x0, x1, x2, parada):
+def muller(fx, x0, x1, x2, parada, erro):
 
     maxiterations = 100
     err = 1000
@@ -43,7 +43,11 @@ def muller(fx, x0, x1, x2, parada):
             p3 = p2 + x2
 
         #calculo do erro
-        err = abs(p3 - x2)/abs(p3)
+        if (erro == 'erroAbsoluto'):
+            err = abs(p3 - x2)
+
+        if (erro == 'erroRelativo'):
+            err = abs(p3 - x2)/abs(p3)
 
         #criterio de parada
         if err <= parada:
@@ -58,6 +62,6 @@ def muller(fx, x0, x1, x2, parada):
 
 # exemplo testezinho
 func = 'x**3 - 13 *x - 12'
-result, itera = muller(func,'4.5','5.5','5','0.0001')
+result, itera = muller(func,'4.5','5.5','5','0.0001', 'erroRelativo')
 print result
 print itera
