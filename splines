@@ -33,7 +33,7 @@ def naturalspline(x,y):
   for i in range(0,(size-1)):
       x0=str(i)
 
-      s1=(str(a[i]),'+',str(b[i]),'(x-',x0,') +',str(c[i]),'(x-',x0,')**2 +',str(d[i]),'(x-',x0,')**3')
+      s1=(str(a[i]),'+',str(b[i]),'*(x-',x0,') +',str(c[i]),'*(x-',x0,')**2 +',str(d[i]),'*(x-',x0,')**3')
       s.append(' '.join(s1))
         
   print(s)
