@@ -3,4 +3,5 @@
 From scipy.interpolate import CubicSpline
 
 def naturalspline(x,y):
+  #Vamos iterar pelos pontos e retornar as funcoes geradas
   cs = CubicSpline(x,y,bc_type='natural')
