@@ -1,0 +1,6 @@
+#Spline natural
+
+From scipy.interpolate import CubicSpline
+
+def naturalspline(x,y):
+  cs = CubicSpline(x,y,bc_type='natural')
