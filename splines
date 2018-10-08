@@ -25,7 +25,6 @@ def naturalspline(x,y):
   #gerando as expressoes
   
   for i in range(0,(size-1)):
-        print(i)
         a.append(cs.c.item(3,i))
         b.append(cs.c.item(2,i))
         c.append(cs.c.item(1,i))
